@@ -132,7 +132,7 @@ def get_stock_price(symbol: str) -> dict:
     """
     url = (
         "https://www.alphavantage.co/query"
-        f"?function=GLOBAL_QUOTE&symbol={symbol}&apikey=C9PE94QUEW9VWGFM"
+        f"?function=GLOBAL_QUOTE&symbol={symbol}&apikey="
     )
     r = requests.get(url)
     return r.json()
@@ -233,4 +233,5 @@ def thread_has_document(thread_id: str) -> bool:
 
 
 def thread_document_metadata(thread_id: str) -> dict:
+
     return _THREAD_METADATA.get(str(thread_id), {})
