@@ -10,7 +10,7 @@ The project focuses on **LLM orchestration, agent workflows, long-term memory, t
 The goal of this project is to explore how modern GenAI systems can be built using:
 - **LangChain** for LLM interactions and tool calling
 - **LangGraph** for structured, stateful agent workflows
-- **Databases** for long-term memory
+- **Databases** for long-term memory as well as for short term memory
 - **MCP (Model Context Protocol) Server** for standardized tool and context management
 
 The repository demonstrates how the same AI system can scale from a **simple prototype** to a **production-style architecture**.
