@@ -81,7 +81,7 @@ def get_stock_price(symbol:str)->dict:
     """
     fetch latest stock price for a given stock symbol (e.g., AAPL, GOOGL).using Alpaca vantage with api key in the url
     """
-    url=f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey=PAVRSENNZMP0T3DN"
+    url=f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey="
     r=requests.get(url)
     return r.json()
 
@@ -92,7 +92,7 @@ from langchain_core.tools import InjectedToolArg
 def get_conversion_factor(base_currecy:str,target_currency:str)->dict:
     """This function fetches the currency conversion factor between a given base currency and a target currency"""
 
-    url=f'https://v6.exchangerate-api.com/v6/d21877e2bfcc8e6a2bc53ff4/pair/{base_currecy}/{target_currency}'
+    url=f'https://v6.exchangerate-api.com/v6//pair/{base_currecy}/{target_currency}'
 
     response=requests.get(url)
     res=response.json()
@@ -182,3 +182,4 @@ def retrieve_all_threads():
     for checkpoint in checkpointer.list(None):
        all_threads.add(checkpoint.config['configurable']['thread_id']) 
     return list(all_threads)
+
